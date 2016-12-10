@@ -25,6 +25,9 @@ def generate_data(batch_size, length, size):
     input_data[:, length, -1] = 1  # the end symbol
     target_output[:, length + 1:, :size - 1] = sequence
 
+    print "input data", input_data
+    print "target_output", target_output
+
     return input_data, target_output
 
 

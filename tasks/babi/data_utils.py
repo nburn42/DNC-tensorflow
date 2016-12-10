@@ -1,3 +1,8 @@
+"""
+File originally from 
+https://github.com/domluna/memn2n
+"""
+
 from __future__ import absolute_import
 
 import os
@@ -85,9 +90,8 @@ def vectorize_data(data, word_idx, sentence_size, memory_size):
     Empty memories are 1-D arrays of length sentence_size filled with 0's.
     The answer array is returned as a one-hot encoding.
     """
-    S = []
-    Q = []
-    A = []
+    I = []
+    O = []
     for story, query, answer in data:
         ss = []
         for i, sentence in enumerate(story, 1):
